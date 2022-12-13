@@ -1,0 +1,20 @@
+﻿ImageSearch
+1.0.0.0
+
+winexe
+C#
+.cs
+D:\Local Repos\Demo\WPFImageSearch\ImageSearch\obj\Debug\net6.0-windows\
+ImageSearch
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+D:\Local Repos\Demo\WPFImageSearch\ImageSearch\App.xaml
+7223310795
+4-1213677836
+13651246864
+333-73667361
+MainWindow.xaml;Themes\CommonTheme.xaml;Themes\HomeViewTheme.xaml;Themes\ImageCardTheme.xaml;Themes\MainWindowTheme.xaml;Themes\ResultsWapperTheme.xaml;Themes\SearchBarTheme.xaml;
+
+True
+

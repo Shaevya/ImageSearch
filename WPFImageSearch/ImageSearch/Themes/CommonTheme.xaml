@@ -1,0 +1,71 @@
+﻿<ResourceDictionary x:Class="AssignClickEventtoButtoninResourceDictionary.Dictionary1"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="LargeTextLabelTheme" TargetType="Label">
+        <Style.Setters>
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Foreground" Value="White" />
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="SearchInfoTheme" TargetType="StackPanel">
+        <Style.Setters>
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Width" Value="auto"/>
+            <Setter Property="Visibility" Value="Visible"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding TotalDataCount, UpdateSourceTrigger=PropertyChanged}" Value="0">
+                <Setter Property="Visibility" Value="Hidden"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="HomeViewWapperTheme" TargetType="Border">
+        <Setter Property="Visibility" Value="Visible"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ShowSearchView, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Value="True">
+                <Setter Property="Visibility" Value="Hidden"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SearchViewWapperTheme" TargetType="Grid">
+        <Setter Property="Visibility" Value="Hidden"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ShowSearchView, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Value="True">
+                <Setter Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="NoResultsTheme" TargetType="Border">
+        <Style.Setters>
+            <Setter Property="Grid.Row" Value="1"/>
+            <Setter Property="Grid.RowSpan" Value="2"/>
+            <Setter Property="Grid.ColumnSpan" Value="3"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="15 5"/>
+            <Setter Property="Visibility" Value="Hidden"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding TotalDataCount, UpdateSourceTrigger=PropertyChanged}" Value="0">
+                <Setter Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ResultsBorderWapperTheme" TargetType="Border" >
+        <Style.Setters>
+            <Setter Property="Background" Value="White" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="#272537" />
+            <Setter Property="Margin" Value="15 0 15 0" />
+            <Setter Property="CornerRadius" Value="5" />
+            <Setter Property="Grid.Row" Value="1"/>
+            <Setter Property="Grid.ColumnSpan" Value="3"/>
+        </Style.Setters>
+    </Style>
+
+</ResourceDictionary>

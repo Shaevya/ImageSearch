@@ -1,0 +1,208 @@
+﻿<Window x:Class="ImageSearchServer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageSearchServer"
+        xmlns:viewModel="clr-namespace:ImageSearchServer.MVVM.ViewModel"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        mc:Ignorable="d"
+        Title="Image Search" Height="720" Width="1280"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        Background="Transparent" 
+        AllowsTransparency="True"
+        Foreground="White">
+    <Border Background="#272537" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <Grid HorizontalAlignment="Stretch">
+
+            <!--#region Row and Column Definition-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <!--#endregion-->
+
+            <!--#region Header-->
+            <Border Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource MenuBorderTheme}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <Label Content="Image Search" 
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            FontWeight="SemiBold"
+                            FontSize="24"
+                            Foreground="LightGray"
+                            Padding="25 0 0 0"
+                            />
+                    </StackPanel>
+
+
+                    <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Orientation="Horizontal">
+                        
+                        <Border CornerRadius="15" Height="29" Width="30" Margin="0 0 10 0">
+                            <TextBlock>
+                                <Hyperlink NavigateUri="{Binding Path=(viewModel:MainViewModel.BioUrl), UpdateSourceTrigger=PropertyChanged}"
+                                           RequestNavigate="Hyperlink_RequestNavigate">
+                                    <Image Source="Images/pofilePic.png" Width="25" >
+                                        <Image.Clip>
+                                            <EllipseGeometry Center="12, 12" RadiusX="12" RadiusY="12" />
+                                        </Image.Clip>
+                                    </Image>
+                                </Hyperlink>
+                            </TextBlock>
+                        </Border>
+
+                        <Button 
+                            Content="🗕"
+                            Style="{StaticResource MenuButtonTheme}"
+                            Padding="0 0 0 5"
+                            ToolTip="Minimize"
+                            Click="MinimizeButton_Click"/>
+                        <Button 
+                            Content="☐" 
+                            ToolTip="Maximize"
+                            Style="{StaticResource MenuButtonTheme}"
+                            Click="MaximizeButton_Click"/>
+                        <Button 
+                            Content="🗙"
+                            Style="{StaticResource MenuButtonTheme}"
+                            Foreground="Red"
+                            Margin="0 0 10 0"
+                            ToolTip="Close"
+                            Click="ShutdownButton_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <!--#endregion-->
+
+            <!--#region Home View-->
+            <Border x:Name="HomeViewWapper" Grid.Row="1"
+                  Margin="20 10"
+                    CornerRadius="15"
+                  Style="{StaticResource HomeViewWapperTheme}">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#584ba3" Offset="0"/>
+                        <GradientStop Color="#2a2354" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Vertical" Width="auto">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Label Grid.Row="0" 
+                                   Content="Images Search"
+                                   Foreground="AliceBlue"
+                                   FontSize="30"
+                                       VerticalContentAlignment="Center"
+                                   HorizontalContentAlignment="Center"
+                                   Margin="0 0 0 10"/>
+                                <Image Source="Images/cartoonSearch.png" Height="100" Width="75" RenderTransformOrigin="0.417,0.346"/>
+                            </StackPanel>
+
+                            <TextBox 
+                                Grid.Row="1"
+                                Style="{StaticResource HomeSearchBarTheme}"
+                                Text="{Binding Path=(viewModel:MainViewModel.Keyword), UpdateSourceTrigger=PropertyChanged}"
+                                >
+                                <TextBox.InputBindings>
+                                    <KeyBinding Command="{Binding Path=(viewModel:MainViewModel.ShowSearchViewCommand)}" Key="Return" />
+                                </TextBox.InputBindings>
+                            </TextBox>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Border>
+            <!--#endregion-->
+
+            <!--#region Search Layout-->
+            <Grid x:Name="SearchViewWapper" Grid.Row="1" Style="{StaticResource SearchViewWapperTheme}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="247*" />
+                    <ColumnDefinition Width="532*"/>
+                    <ColumnDefinition Width="301*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+
+                <!--#region Search Results Wrapper-->
+
+                <!--#region Search Info-->
+                <Border Grid.Row="0" Grid.ColumnSpan="3" Background="Transparent" Padding="15 5" VerticalAlignment="Center">
+                    <Grid HorizontalAlignment="Stretch" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Style="{StaticResource SearchInfoTheme}" VerticalAlignment="Center">
+                            <Label Content="Search Results for" Style="{StaticResource LargeTextLabelTheme}"/>
+                            <Label Content="{Binding Path=(viewModel:MainViewModel.SearchedKeyword)}" Style="{StaticResource LargeTextLabelTheme}"/>
+                            <Label Content=": " Style="{StaticResource LargeTextLabelTheme}" />
+                            <Label Content="{Binding CurrentDataCount, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource LargeTextLabelTheme}"/>
+                            <Label Content="/" Foreground="White" Style="{StaticResource LargeTextLabelTheme}" />
+                            <Label Content="{Binding TotalDataCount}" Style="{StaticResource LargeTextLabelTheme}" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <TextBox x:Name="SearchBarTB"
+                                     GotFocus="SearchBarTB_GotFocus"
+                                     LostFocus="SearchBarTB_LostFocus"
+                                     Text="{Binding Path=(viewModel:MainViewModel.Keyword), UpdateSourceTrigger=PropertyChanged}"
+                                     Style="{StaticResource HomeSearchBarTheme2}"
+                                     KeyUp="SearchTextBox_KeyUp"
+                                     >
+                                <TextBox.InputBindings>
+                                    <KeyBinding Command="{Binding Path=(viewModel:MainViewModel.SearchImagesCommand)}" Key="Return" />
+                                </TextBox.InputBindings>
+                            </TextBox>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <!--#endregion-->
+
+                <!--#region Search layout-->
+                <Border Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource ResultsBorderWapperTheme}" >
+                    <ScrollViewer
+                        x:Name="ImageWrapperScrollBar"
+                        VerticalAlignment="Stretch" 
+                        HorizontalAlignment="Stretch"
+                        Padding="30"
+                        ScrollChanged="ImagesScrollViewer_ScrollChanged"
+                        VerticalScrollBarVisibility="Auto">
+                        <ItemsControl x:Name="ImagesInfos" ItemsSource="{Binding Path=Images}" Style="{StaticResource ResultsWapperTheme}" />
+                    </ScrollViewer>
+                </Border>
+                <!--#endregion-->
+
+                <!--#endregion-->
+
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Footer-->
+            <Border Grid.Row="2" Grid.ColumnSpan="2" Background="Transparent" Padding="15 0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Content="@Copyright 2022" Foreground="White"/>
+                </StackPanel>
+            </Border>
+            <!--#endregion-->
+
+        </Grid>
+    </Border>
+
+</Window>
+  

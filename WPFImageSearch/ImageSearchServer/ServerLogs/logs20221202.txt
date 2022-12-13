@@ -1,0 +1,480 @@
+2022-12-02 04:23:32.928 +05:30 [INF] Now listening on: https://localhost:7018
+2022-12-02 04:23:32.958 +05:30 [INF] Now listening on: http://localhost:5018
+2022-12-02 04:23:32.963 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 04:23:32.963 +05:30 [INF] Hosting environment: Development
+2022-12-02 04:23:32.964 +05:30 [INF] Content root path: D:\Local Repos\WPFImageSearch\ImageSearchServer\
+2022-12-02 04:23:33.701 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/index.html - -
+2022-12-02 04:23:33.865 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/index.html - - - 200 - text/html;charset=utf-8 197.5606ms
+2022-12-02 04:23:33.874 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - -
+2022-12-02 04:23:33.882 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 7.5264ms
+2022-12-02 04:23:33.888 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_vs/browserLink - -
+2022-12-02 04:23:33.902 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.6944ms
+2022-12-02 04:23:34.163 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - -
+2022-12-02 04:23:34.252 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 89.1515ms
+2022-12-02 04:26:52.775 +05:30 [INF] Now listening on: https://localhost:7018
+2022-12-02 04:26:52.818 +05:30 [INF] Now listening on: http://localhost:5018
+2022-12-02 04:26:52.821 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 04:26:52.821 +05:30 [INF] Hosting environment: Development
+2022-12-02 04:26:52.821 +05:30 [INF] Content root path: D:\Local Repos\WPFImageSearch\ImageSearchServer\
+2022-12-02 04:26:53.188 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/index.html - -
+2022-12-02 04:26:53.366 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/index.html - - - 200 - text/html;charset=utf-8 180.2093ms
+2022-12-02 04:26:53.374 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - -
+2022-12-02 04:26:53.376 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 1.9541ms
+2022-12-02 04:26:53.395 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_vs/browserLink - -
+2022-12-02 04:26:53.409 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.2641ms
+2022-12-02 04:26:53.653 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - -
+2022-12-02 04:26:53.760 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 107.4811ms
+2022-12-02 04:26:58.907 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - -
+2022-12-02 04:26:58.940 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:26:58.964 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 04:26:58.983 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 14.937ms
+2022-12-02 04:26:58.984 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:26:58.986 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ImageSearchServer.Controllers.ImageController.GetImages(String keyword, Int32 pageNo, Int32 itemsPerPage) in D:\Local Repos\WPFImageSearch\ImageSearchServer\Controllers\ImageController.cs:line 25
+   at lambda_method8(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-12-02 04:26:59.022 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - - - 500 - text/plain;+charset=utf-8 114.8110ms
+2022-12-02 04:27:45.676 +05:30 [INF] Now listening on: https://localhost:7018
+2022-12-02 04:27:45.701 +05:30 [INF] Now listening on: http://localhost:5018
+2022-12-02 04:27:45.703 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 04:27:45.704 +05:30 [INF] Hosting environment: Development
+2022-12-02 04:27:45.704 +05:30 [INF] Content root path: D:\Local Repos\WPFImageSearch\ImageSearchServer\
+2022-12-02 04:27:46.150 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/index.html - -
+2022-12-02 04:27:46.336 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/index.html - - - 200 - text/html;charset=utf-8 187.8950ms
+2022-12-02 04:27:46.344 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - -
+2022-12-02 04:27:46.347 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 2.6254ms
+2022-12-02 04:27:46.358 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_vs/browserLink - -
+2022-12-02 04:27:46.371 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.2555ms
+2022-12-02 04:27:46.604 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - -
+2022-12-02 04:27:46.685 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 80.8428ms
+2022-12-02 04:27:57.574 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - -
+2022-12-02 04:27:57.579 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:27:57.611 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 04:27:57.637 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 21.2485ms
+2022-12-02 04:27:57.638 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:27:57.641 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ImageSearchServer.Controllers.ImageController.GetImages(String keyword, Int32 pageNo, Int32 itemsPerPage) in D:\Local Repos\WPFImageSearch\ImageSearchServer\Controllers\ImageController.cs:line 25
+   at lambda_method8(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-12-02 04:27:57.655 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - - - 500 - text/plain;+charset=utf-8 81.3718ms
+2022-12-02 04:27:59.954 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/2/50 - -
+2022-12-02 04:27:59.955 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:27:59.955 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 04:27:59.956 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 0.9957ms
+2022-12-02 04:27:59.956 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:27:59.957 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ImageSearchServer.Controllers.ImageController.GetImages(String keyword, Int32 pageNo, Int32 itemsPerPage) in D:\Local Repos\WPFImageSearch\ImageSearchServer\Controllers\ImageController.cs:line 25
+   at lambda_method8(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-12-02 04:27:59.958 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/2/50 - - - 500 - text/plain;+charset=utf-8 3.9475ms
+2022-12-02 04:28:47.864 +05:30 [INF] Now listening on: https://localhost:7018
+2022-12-02 04:28:47.901 +05:30 [INF] Now listening on: http://localhost:5018
+2022-12-02 04:28:47.905 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 04:28:47.905 +05:30 [INF] Hosting environment: Development
+2022-12-02 04:28:47.905 +05:30 [INF] Content root path: D:\Local Repos\WPFImageSearch\ImageSearchServer\
+2022-12-02 04:28:48.711 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/index.html - -
+2022-12-02 04:28:49.050 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - -
+2022-12-02 04:28:49.059 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/index.html - - - 200 - text/html;charset=utf-8 352.2969ms
+2022-12-02 04:28:49.059 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 7.8735ms
+2022-12-02 04:28:49.072 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_vs/browserLink - -
+2022-12-02 04:28:49.102 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.6771ms
+2022-12-02 04:28:49.360 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - -
+2022-12-02 04:28:49.477 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 116.3356ms
+2022-12-02 04:29:02.979 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/api/Image/GetImages/dog/1/10 - -
+2022-12-02 04:29:02.987 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:29:03.053 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 04:29:29.381 +05:30 [INF] Now listening on: https://localhost:7018
+2022-12-02 04:29:29.404 +05:30 [INF] Now listening on: http://localhost:5018
+2022-12-02 04:29:29.406 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 04:29:29.406 +05:30 [INF] Hosting environment: Development
+2022-12-02 04:29:29.407 +05:30 [INF] Content root path: D:\Local Repos\WPFImageSearch\ImageSearchServer\
+2022-12-02 04:29:29.972 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/index.html - -
+2022-12-02 04:29:30.162 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/index.html - - - 200 - text/html;charset=utf-8 192.3341ms
+2022-12-02 04:29:30.171 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - -
+2022-12-02 04:29:30.174 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 2.2622ms
+2022-12-02 04:29:30.186 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_vs/browserLink - -
+2022-12-02 04:29:30.219 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.5047ms
+2022-12-02 04:29:30.429 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - -
+2022-12-02 04:29:30.508 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 78.5679ms
+2022-12-02 04:29:42.569 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - -
+2022-12-02 04:29:42.576 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:29:42.623 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 04:29:42.648 +05:30 [INF] Received request for GetImages -> keyword:Apple, pageNo:1, itemsPerPage:50
+2022-12-02 04:29:43.862 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 04:29:43.876 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 1247.4222ms
+2022-12-02 04:29:43.877 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:29:43.877 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - - - 200 - application/json;+charset=utf-8 1308.0034ms
+2022-12-02 04:42:08.344 +05:30 [INF] Now listening on: https://localhost:7018
+2022-12-02 04:42:08.362 +05:30 [INF] Now listening on: http://localhost:5018
+2022-12-02 04:42:08.364 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 04:42:08.364 +05:30 [INF] Hosting environment: Development
+2022-12-02 04:42:08.364 +05:30 [INF] Content root path: D:\Local Repos\WPFImageSearch\ImageSearchServer\
+2022-12-02 04:42:08.877 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/index.html - -
+2022-12-02 04:42:09.029 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/index.html - - - 200 - text/html;charset=utf-8 153.9643ms
+2022-12-02 04:42:09.041 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - -
+2022-12-02 04:42:09.044 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 2.6963ms
+2022-12-02 04:42:09.052 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_vs/browserLink - -
+2022-12-02 04:42:09.064 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.6066ms
+2022-12-02 04:42:09.204 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - -
+2022-12-02 04:42:09.278 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.6462ms
+2022-12-02 04:42:20.214 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Panda/1/50 - -
+2022-12-02 04:42:20.218 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:42:20.242 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 04:42:20.253 +05:30 [INF] Received request for GetImages -> keyword:Panda, pageNo:1, itemsPerPage:50
+2022-12-02 04:42:21.147 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 04:42:21.153 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 908.2689ms
+2022-12-02 04:42:21.154 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:42:21.154 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Panda/1/50 - - - 200 - application/json;+charset=utf-8 940.7266ms
+2022-12-02 04:42:45.129 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Panda/2/50 - -
+2022-12-02 04:42:45.129 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:42:45.130 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 04:42:45.131 +05:30 [INF] Received request for GetImages -> keyword:Panda, pageNo:2, itemsPerPage:50
+2022-12-02 04:42:46.035 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 04:42:46.035 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 905.5037ms
+2022-12-02 04:42:46.035 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 04:42:46.036 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Panda/2/50 - - - 200 - application/json;+charset=utf-8 906.8529ms
+2022-12-02 10:58:13.678 +05:30 [INF] Now listening on: https://localhost:7018
+2022-12-02 10:58:13.695 +05:30 [INF] Now listening on: http://localhost:5018
+2022-12-02 10:58:13.697 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 10:58:13.697 +05:30 [INF] Hosting environment: Development
+2022-12-02 10:58:13.697 +05:30 [INF] Content root path: D:\Local Repos\Demo\WPFImageSearch\ImageSearchServer\
+2022-12-02 10:58:15.084 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/index.html - -
+2022-12-02 10:58:15.311 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/index.html - - - 200 - text/html;charset=utf-8 230.0775ms
+2022-12-02 10:58:15.322 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - -
+2022-12-02 10:58:15.324 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 2.0354ms
+2022-12-02 10:58:15.324 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_vs/browserLink - -
+2022-12-02 10:58:15.355 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.2930ms
+2022-12-02 10:58:15.427 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - -
+2022-12-02 10:58:15.485 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 57.9689ms
+2022-12-02 10:58:16.315 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/index.html - -
+2022-12-02 10:58:16.320 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/index.html - - - 200 - text/html;charset=utf-8 5.4247ms
+2022-12-02 10:58:16.329 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - -
+2022-12-02 10:58:16.329 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.4273ms
+2022-12-02 10:58:16.337 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_vs/browserLink - -
+2022-12-02 10:58:16.344 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 7.0798ms
+2022-12-02 10:58:16.433 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - -
+2022-12-02 10:58:16.434 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1.5024ms
+2022-12-02 10:58:26.732 +05:30 [INF] Now listening on: https://localhost:7018
+2022-12-02 10:58:26.757 +05:30 [INF] Now listening on: http://localhost:5018
+2022-12-02 10:58:26.759 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 10:58:26.759 +05:30 [INF] Hosting environment: Development
+2022-12-02 10:58:26.759 +05:30 [INF] Content root path: D:\Local Repos\Demo\WPFImageSearch\ImageSearchServer\
+2022-12-02 10:58:27.412 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/index.html - -
+2022-12-02 10:58:27.638 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/index.html - - - 200 - text/html;charset=utf-8 227.9767ms
+2022-12-02 10:58:27.651 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - -
+2022-12-02 10:58:27.653 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_vs/browserLink - -
+2022-12-02 10:58:27.655 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 4.2228ms
+2022-12-02 10:58:27.668 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.6024ms
+2022-12-02 10:58:27.778 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - -
+2022-12-02 10:58:27.883 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 104.6065ms
+2022-12-02 10:59:18.468 +05:30 [INF] Now listening on: https://localhost:7018
+2022-12-02 10:59:18.485 +05:30 [INF] Now listening on: http://localhost:5018
+2022-12-02 10:59:18.487 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 10:59:18.488 +05:30 [INF] Hosting environment: Development
+2022-12-02 10:59:18.488 +05:30 [INF] Content root path: D:\Local Repos\Demo\WPFImageSearch\ImageSearchServer\
+2022-12-02 10:59:18.957 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/index.html - -
+2022-12-02 10:59:19.081 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/index.html - - - 200 - text/html;charset=utf-8 125.5137ms
+2022-12-02 10:59:19.086 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - -
+2022-12-02 10:59:19.088 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 1.9071ms
+2022-12-02 10:59:19.092 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_vs/browserLink - -
+2022-12-02 10:59:19.101 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.6538ms
+2022-12-02 10:59:19.193 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - -
+2022-12-02 10:59:19.248 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 55.6076ms
+2022-12-02 10:59:30.418 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - -
+2022-12-02 10:59:30.422 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 10:59:30.438 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 10:59:30.450 +05:30 [INF] Received request for GetImages -> keyword:Apple, pageNo:1, itemsPerPage:50
+2022-12-02 10:59:30.946 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 10:59:30.953 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 511.117ms
+2022-12-02 10:59:30.953 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 10:59:30.953 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - - - 200 - application/json;+charset=utf-8 534.9660ms
+2022-12-02 11:19:11.628 +05:30 [INF] Now listening on: https://localhost:7018
+2022-12-02 11:19:11.653 +05:30 [INF] Now listening on: http://localhost:5018
+2022-12-02 11:19:11.658 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 11:19:11.659 +05:30 [INF] Hosting environment: Development
+2022-12-02 11:19:11.659 +05:30 [INF] Content root path: D:\Local Repos\Demo\WPFImageSearch\ImageSearchServer\
+2022-12-02 11:19:12.152 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/index.html - -
+2022-12-02 11:19:12.365 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/index.html - - - 200 - text/html;charset=utf-8 220.7525ms
+2022-12-02 11:19:12.372 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - -
+2022-12-02 11:19:12.379 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 6.6276ms
+2022-12-02 11:19:12.386 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/_vs/browserLink - -
+2022-12-02 11:19:12.418 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.1604ms
+2022-12-02 11:19:12.597 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - -
+2022-12-02 11:19:12.705 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7018/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 108.0712ms
+2022-12-02 11:19:42.006 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Orange/1/50 - -
+2022-12-02 11:19:42.010 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:19:42.027 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:19:42.035 +05:30 [INF] Received request for GetImages -> keyword:Orange, pageNo:1, itemsPerPage:50
+2022-12-02 11:19:42.545 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:19:42.550 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 520.736ms
+2022-12-02 11:19:42.551 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:19:42.551 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Orange/1/50 - - - 200 - application/json;+charset=utf-8 544.5979ms
+2022-12-02 11:19:54.957 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Panda/1/50 - -
+2022-12-02 11:19:54.957 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:19:54.957 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:19:54.958 +05:30 [INF] Received request for GetImages -> keyword:Panda, pageNo:1, itemsPerPage:50
+2022-12-02 11:19:55.359 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:19:55.359 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 401.9485ms
+2022-12-02 11:19:55.359 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:19:55.360 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Panda/1/50 - - - 200 - application/json;+charset=utf-8 402.8255ms
+2022-12-02 11:20:07.672 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Panda/2/50 - -
+2022-12-02 11:20:07.672 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:07.672 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:20:07.674 +05:30 [INF] Received request for GetImages -> keyword:Panda, pageNo:2, itemsPerPage:50
+2022-12-02 11:20:08.673 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:20:08.673 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 1000.5086ms
+2022-12-02 11:20:08.673 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:08.673 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Panda/2/50 - - - 200 - application/json;+charset=utf-8 1001.7096ms
+2022-12-02 11:20:11.380 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Panda/3/50 - -
+2022-12-02 11:20:11.381 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:11.381 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:20:11.382 +05:30 [INF] Received request for GetImages -> keyword:Panda, pageNo:3, itemsPerPage:50
+2022-12-02 11:20:11.962 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:20:11.963 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 581.4842ms
+2022-12-02 11:20:11.963 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:11.963 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Panda/3/50 - - - 200 - application/json;+charset=utf-8 583.2608ms
+2022-12-02 11:20:14.949 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Panda/4/50 - -
+2022-12-02 11:20:14.950 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:14.950 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:20:14.950 +05:30 [INF] Received request for GetImages -> keyword:Panda, pageNo:4, itemsPerPage:50
+2022-12-02 11:20:15.874 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:20:15.874 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 924.4211ms
+2022-12-02 11:20:15.874 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:15.874 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Panda/4/50 - - - 200 - application/json;+charset=utf-8 925.0135ms
+2022-12-02 11:20:26.214 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - -
+2022-12-02 11:20:26.215 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:26.215 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:20:26.215 +05:30 [INF] Received request for GetImages -> keyword:Apple, pageNo:1, itemsPerPage:50
+2022-12-02 11:20:27.010 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:20:27.010 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 795.246ms
+2022-12-02 11:20:27.010 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:27.010 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - - - 200 - application/json;+charset=utf-8 795.9058ms
+2022-12-02 11:20:27.519 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/2/50 - -
+2022-12-02 11:20:27.519 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:27.519 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:20:27.519 +05:30 [INF] Received request for GetImages -> keyword:Apple, pageNo:2, itemsPerPage:50
+2022-12-02 11:20:28.032 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:20:28.032 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 513.0973ms
+2022-12-02 11:20:28.032 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:28.032 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/2/50 - - - 200 - application/json;+charset=utf-8 513.6131ms
+2022-12-02 11:20:28.670 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/3/50 - -
+2022-12-02 11:20:28.671 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:28.671 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:20:28.671 +05:30 [INF] Received request for GetImages -> keyword:Apple, pageNo:3, itemsPerPage:50
+2022-12-02 11:20:29.149 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:20:29.149 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 478.1858ms
+2022-12-02 11:20:29.149 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:29.149 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/3/50 - - - 200 - application/json;+charset=utf-8 478.9834ms
+2022-12-02 11:20:29.634 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/4/50 - -
+2022-12-02 11:20:29.634 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:29.634 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:20:29.635 +05:30 [INF] Received request for GetImages -> keyword:Apple, pageNo:4, itemsPerPage:50
+2022-12-02 11:20:30.150 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:20:30.150 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 515.5389ms
+2022-12-02 11:20:30.150 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:20:30.150 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/4/50 - - - 200 - application/json;+charset=utf-8 516.0884ms
+2022-12-02 11:22:41.958 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Orange/1/50 - -
+2022-12-02 11:22:41.958 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:22:41.958 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:22:41.958 +05:30 [INF] Received request for GetImages -> keyword:Orange, pageNo:1, itemsPerPage:50
+2022-12-02 11:22:42.773 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:22:42.773 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 815.3645ms
+2022-12-02 11:22:42.773 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:22:42.773 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Orange/1/50 - - - 200 - application/json;+charset=utf-8 815.7391ms
+2022-12-02 11:22:59.239 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Orange/2/50 - -
+2022-12-02 11:22:59.239 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:22:59.239 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:22:59.239 +05:30 [INF] Received request for GetImages -> keyword:Orange, pageNo:2, itemsPerPage:50
+2022-12-02 11:23:00.030 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:23:00.030 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 791.4848ms
+2022-12-02 11:23:00.030 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:23:00.030 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Orange/2/50 - - - 200 - application/json;+charset=utf-8 791.9718ms
+2022-12-02 11:23:05.411 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Tree/1/50 - -
+2022-12-02 11:23:05.411 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:23:05.411 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:23:05.412 +05:30 [INF] Received request for GetImages -> keyword:Tree, pageNo:1, itemsPerPage:50
+2022-12-02 11:23:06.058 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:23:06.058 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 646.6776ms
+2022-12-02 11:23:06.058 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:23:06.058 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Tree/1/50 - - - 200 - application/json;+charset=utf-8 647.2131ms
+2022-12-02 11:23:06.574 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Tree/2/50 - -
+2022-12-02 11:23:06.574 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:23:06.574 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:23:06.574 +05:30 [INF] Received request for GetImages -> keyword:Tree, pageNo:2, itemsPerPage:50
+2022-12-02 11:23:07.433 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:23:07.433 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 858.8035ms
+2022-12-02 11:23:07.433 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:23:07.433 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Tree/2/50 - - - 200 - application/json;+charset=utf-8 859.3370ms
+2022-12-02 11:26:15.667 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Tree/1/50 - -
+2022-12-02 11:26:15.667 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:26:15.667 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:26:15.667 +05:30 [INF] Received request for GetImages -> keyword:Tree, pageNo:1, itemsPerPage:50
+2022-12-02 11:26:16.116 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:26:16.116 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 448.6148ms
+2022-12-02 11:26:16.116 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:26:16.116 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Tree/1/50 - - - 200 - application/json;+charset=utf-8 449.0184ms
+2022-12-02 11:26:19.712 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Tree/2/50 - -
+2022-12-02 11:26:19.713 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:26:19.713 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:26:19.714 +05:30 [INF] Received request for GetImages -> keyword:Tree, pageNo:2, itemsPerPage:50
+2022-12-02 11:26:20.253 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:26:20.253 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 539.9676ms
+2022-12-02 11:26:20.253 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:26:20.254 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Tree/2/50 - - - 200 - application/json;+charset=utf-8 541.0291ms
+2022-12-02 11:26:24.855 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - -
+2022-12-02 11:26:24.855 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:26:24.855 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:26:24.855 +05:30 [INF] Received request for GetImages -> keyword:Apple, pageNo:1, itemsPerPage:50
+2022-12-02 11:26:25.660 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:26:25.660 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 804.7527ms
+2022-12-02 11:26:25.660 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:26:25.660 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - - - 200 - application/json;+charset=utf-8 805.2612ms
+2022-12-02 11:26:26.111 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/2/50 - -
+2022-12-02 11:26:26.112 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:26:26.112 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:26:26.112 +05:30 [INF] Received request for GetImages -> keyword:Apple, pageNo:2, itemsPerPage:50
+2022-12-02 11:26:26.953 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:26:26.953 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 841.6557ms
+2022-12-02 11:26:26.953 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:26:26.954 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/2/50 - - - 200 - application/json;+charset=utf-8 842.0454ms
+2022-12-02 11:28:35.033 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - -
+2022-12-02 11:28:35.033 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:28:35.033 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:28:35.034 +05:30 [INF] Received request for GetImages -> keyword:Apple, pageNo:1, itemsPerPage:50
+2022-12-02 11:28:35.820 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:28:35.821 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 787.2248ms
+2022-12-02 11:28:35.821 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:28:35.821 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - - - 200 - application/json;+charset=utf-8 787.5779ms
+2022-12-02 11:28:39.567 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/2/50 - -
+2022-12-02 11:28:39.567 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:28:39.567 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:28:39.568 +05:30 [INF] Received request for GetImages -> keyword:Apple, pageNo:2, itemsPerPage:50
+2022-12-02 11:28:40.328 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:28:40.328 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 761.1074ms
+2022-12-02 11:28:40.328 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:28:40.329 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/2/50 - - - 200 - application/json;+charset=utf-8 761.5976ms
+2022-12-02 11:28:44.821 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Cats/1/50 - -
+2022-12-02 11:28:44.822 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:28:44.822 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:28:44.822 +05:30 [INF] Received request for GetImages -> keyword:Cats, pageNo:1, itemsPerPage:50
+2022-12-02 11:28:45.285 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:28:45.285 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 463.1119ms
+2022-12-02 11:28:45.285 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:28:45.285 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Cats/1/50 - - - 200 - application/json;+charset=utf-8 463.7325ms
+2022-12-02 11:28:45.781 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Cats/2/50 - -
+2022-12-02 11:28:45.781 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:28:45.781 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:28:45.781 +05:30 [INF] Received request for GetImages -> keyword:Cats, pageNo:2, itemsPerPage:50
+2022-12-02 11:28:46.622 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:28:46.623 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 841.6096ms
+2022-12-02 11:28:46.623 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:28:46.623 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Cats/2/50 - - - 200 - application/json;+charset=utf-8 842.0319ms
+2022-12-02 11:29:55.419 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - -
+2022-12-02 11:29:55.419 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:29:55.419 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:29:55.419 +05:30 [INF] Received request for GetImages -> keyword:Apple, pageNo:1, itemsPerPage:50
+2022-12-02 11:29:55.861 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:29:55.862 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 442.683ms
+2022-12-02 11:29:55.862 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:29:55.862 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/1/50 - - - 200 - application/json;+charset=utf-8 443.0634ms
+2022-12-02 11:29:59.035 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/2/50 - -
+2022-12-02 11:29:59.035 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:29:59.035 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:29:59.036 +05:30 [INF] Received request for GetImages -> keyword:Apple, pageNo:2, itemsPerPage:50
+2022-12-02 11:29:59.454 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:29:59.455 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 419.0766ms
+2022-12-02 11:29:59.455 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:29:59.455 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Apple/2/50 - - - 200 - application/json;+charset=utf-8 419.6514ms
+2022-12-02 11:30:03.781 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Orange/1/50 - -
+2022-12-02 11:30:03.781 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:30:03.782 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:30:03.782 +05:30 [INF] Received request for GetImages -> keyword:Orange, pageNo:1, itemsPerPage:50
+2022-12-02 11:30:04.613 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:30:04.613 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 831.5867ms
+2022-12-02 11:30:04.613 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:30:04.613 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Orange/1/50 - - - 200 - application/json;+charset=utf-8 832.0468ms
+2022-12-02 11:32:53.612 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Orange/2/50 - -
+2022-12-02 11:32:53.613 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:32:53.613 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:32:53.613 +05:30 [INF] Received request for GetImages -> keyword:Orange, pageNo:2, itemsPerPage:50
+2022-12-02 11:32:54.455 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:32:54.455 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 842.546ms
+2022-12-02 11:32:54.455 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:32:54.455 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Orange/2/50 - - - 200 - application/json;+charset=utf-8 843.0322ms
+2022-12-02 11:33:11.124 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Orange/3/50 - -
+2022-12-02 11:33:11.125 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:33:11.125 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:33:11.125 +05:30 [INF] Received request for GetImages -> keyword:Orange, pageNo:3, itemsPerPage:50
+2022-12-02 11:33:11.644 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:33:11.644 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 519.2421ms
+2022-12-02 11:33:11.644 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:33:11.644 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Orange/3/50 - - - 200 - application/json;+charset=utf-8 519.7668ms
+2022-12-02 11:33:40.982 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Applesdsds/1/50 - -
+2022-12-02 11:33:40.983 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:33:40.983 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:33:40.983 +05:30 [INF] Received request for GetImages -> keyword:Applesdsds, pageNo:1, itemsPerPage:50
+2022-12-02 11:33:41.753 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:33:41.753 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 770.0102ms
+2022-12-02 11:33:41.753 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:33:41.753 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Applesdsds/1/50 - - - 200 - application/json;+charset=utf-8 770.3050ms
+2022-12-02 11:33:44.616 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Applesdsds/2/50 - -
+2022-12-02 11:33:44.616 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:33:44.616 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:33:44.616 +05:30 [INF] Received request for GetImages -> keyword:Applesdsds, pageNo:2, itemsPerPage:50
+2022-12-02 11:33:44.993 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:33:44.993 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 377.452ms
+2022-12-02 11:33:44.993 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:33:44.993 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Applesdsds/2/50 - - - 200 - application/json;+charset=utf-8 377.7792ms
+2022-12-02 11:33:53.140 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Tree/1/50 - -
+2022-12-02 11:33:53.140 +05:30 [INF] Executing endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:33:53.140 +05:30 [INF] Route matched with {action = "GetImages", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[ImageSearchServer.MVVM.Model.ImageInfoModel] GetImages(System.String, Int32, Int32) on controller ImageSearchServer.Controllers.ImageController (ImageSearchServer).
+2022-12-02 11:33:53.140 +05:30 [INF] Received request for GetImages -> keyword:Tree, pageNo:1, itemsPerPage:50
+2022-12-02 11:33:53.614 +05:30 [INF] Executing ObjectResult, writing value of type 'ImageSearchServer.MVVM.Model.ImageInfoModel'.
+2022-12-02 11:33:53.614 +05:30 [INF] Executed action ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer) in 473.841ms
+2022-12-02 11:33:53.614 +05:30 [INF] Executed endpoint 'ImageSearchServer.Controllers.ImageController.GetImages (ImageSearchServer)'
+2022-12-02 11:33:53.614 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7018/api/Image/GetImages/Tree/1/50 - - - 200 - application/json;+charset=utf-8 474.2090ms

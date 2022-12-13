@@ -1,0 +1,5 @@
+2022-12-05 11:38:32.151 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-05 11:38:32.198 +05:30 [INF] Hosting environment: Production
+2022-12-05 11:38:32.199 +05:30 [INF] Content root path: D:\Local Repos\Demo\WPFImageSearch\ImageSearch\bin\Debug\net6.0-windows
+2022-12-05 11:38:32.682 +05:30 [INF] App Started. info
+2022-12-05 16:50:43.924 +05:30 [INF] Application is shutting down...

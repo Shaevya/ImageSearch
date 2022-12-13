@@ -1,0 +1,20 @@
+﻿ImageSearch
+1.0.0.0
+
+winexe
+C#
+.cs
+D:\Local Repos\WPFImageSearch\ImageSearch\obj\Release\net6.0-windows\
+ImageSearch
+none
+false
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
+D:\Local Repos\WPFImageSearch\ImageSearch\App.xaml
+4-1396283854
+
+13-227179085
+219254268025
+MainWindow.xaml;Themes\CommonTheme.xaml;Themes\ImageCardTheme.xaml;Themes\MainWindowTheme.xaml;
+
+False
+

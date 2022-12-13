@@ -1,0 +1,51 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="ResultsWapperTheme" TargetType="ItemsControl" >
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ItemsControl">
+                        <Border HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                            <Grid>
+                                <Border x:Name="NoResultsWrapper" Style="{StaticResource NoResultsTheme}">
+                                    <StackPanel
+                                        Orientation="Horizontal" 
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center">
+                                        <StackPanel Orientation="Vertical">
+                                            <Image Source="../Images/noResults.png" Height="200"/>
+                                            <Label Grid.Row="0" 
+                                                Content="Ooops! No Results Found..."
+                                                Foreground="#272537"
+                                                FontSize="30"
+                                                    VerticalContentAlignment="Center"
+                                                HorizontalContentAlignment="Center"
+                                                Margin="0 0 0 10"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Border>
+                                <ItemsControl x:Name="ImagesInfos" ItemsSource="{Binding Path=Images}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Vertical">
+                                                <Image Source="{Binding URL}" Style="{StaticResource ImageCardTheme}" />
+                                                <Label Content="{Binding Title}" Height="50" Width="100" HorizontalAlignment="Left"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+
+</ResourceDictionary>

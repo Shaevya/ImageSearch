@@ -1,0 +1,26 @@
+2022-12-02 10:59:03.748 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 10:59:03.768 +05:30 [INF] Hosting environment: Production
+2022-12-02 10:59:03.768 +05:30 [INF] Content root path: D:\Local Repos\Demo\WPFImageSearch\ImageSearch\bin\Debug\net6.0-windows
+2022-12-02 10:59:03.853 +05:30 [INF] App Started. info
+2022-12-02 10:59:20.931 +05:30 [INF] Application is shutting down...
+2022-12-02 11:19:26.682 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 11:19:26.729 +05:30 [INF] Hosting environment: Production
+2022-12-02 11:19:26.731 +05:30 [INF] Content root path: D:\Local Repos\Demo\WPFImageSearch\ImageSearch\bin\Debug\net6.0-windows
+2022-12-02 11:19:26.914 +05:30 [INF] App Started. info
+2022-12-02 11:26:10.794 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 11:26:10.828 +05:30 [INF] Hosting environment: Production
+2022-12-02 11:26:10.829 +05:30 [INF] Content root path: D:\Local Repos\Demo\WPFImageSearch\ImageSearch\bin\Debug\net6.0-windows
+2022-12-02 11:26:11.031 +05:30 [INF] App Started. info
+2022-12-02 11:28:31.645 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 11:28:31.677 +05:30 [INF] Hosting environment: Production
+2022-12-02 11:28:31.678 +05:30 [INF] Content root path: D:\Local Repos\Demo\WPFImageSearch\ImageSearch\bin\Debug\net6.0-windows
+2022-12-02 11:28:31.911 +05:30 [INF] App Started. info
+2022-12-02 11:29:34.997 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 11:29:35.040 +05:30 [INF] Hosting environment: Production
+2022-12-02 11:29:35.042 +05:30 [INF] Content root path: D:\Local Repos\Demo\WPFImageSearch\ImageSearch\bin\Debug\net6.0-windows
+2022-12-02 11:29:35.258 +05:30 [INF] App Started. info
+2022-12-02 11:33:24.243 +05:30 [INF] Application is shutting down...
+2022-12-02 11:33:33.091 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 11:33:33.127 +05:30 [INF] Hosting environment: Production
+2022-12-02 11:33:33.128 +05:30 [INF] Content root path: D:\Local Repos\Demo\WPFImageSearch\ImageSearch\bin\Debug\net6.0-windows
+2022-12-02 11:33:33.324 +05:30 [INF] App Started. info

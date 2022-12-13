@@ -1,0 +1,112 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="HomeSearchBarTheme" TargetType="{x:Type TextBox}">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border Width="600" CornerRadius="25" Background="White">
+                            <Grid>
+                                <Rectangle StrokeThickness="1" />
+                                <TextBox 
+                                    x:Name="SearchBox"
+                                    Text="{Binding Path=Text, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}"
+                                    BorderThickness="0"
+                                    Margin="10"
+                                    Padding="20 5 40 5"
+                                    VerticalAlignment="Center"
+                                    FontSize="18"
+                                 />
+                                <TextBlock IsHitTestVisible="False"
+                                           Text="Search"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           Margin="30 0 0 0">
+                                    <TextBlock.Style>
+                                        <Style TargetType="{x:Type TextBlock}">
+                                            <Setter Property="Visibility" Value="Hidden"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Text, ElementName=SearchBox}" Value="">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+
+
+                                <TextBlock x:Name="SeachTBlock"
+                                        HorizontalAlignment="Right" 
+                                        VerticalAlignment="Center"
+                                        Width="40"
+                                        Height="30"
+                                        Background="Transparent"
+                                        >
+                                    <Image Source="/search.png" />
+                                </TextBlock>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+
+
+
+    <Style x:Key="HomeSearchBarTheme2" TargetType="{x:Type TextBox}">
+        <Style.Setters>
+            <Setter Property="Width" Value="300" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border CornerRadius="20" Background="White">
+                            <Grid>
+                                <Rectangle StrokeThickness="1" />
+                                <TextBox 
+                                    x:Name="ImageSearchBox"
+                                    Text="{Binding Path=Text, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}"
+                                    BorderThickness="0"
+                                    Margin="10"
+                                    Padding="10 2 20 2"
+                                    VerticalAlignment="Center"
+                                    FontSize="16"
+                                 />
+                                <TextBlock IsHitTestVisible="False"
+                                           Text="Search"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Left"
+                                           FontSize="16"
+                                           Margin="30 0 0 0">
+                                    <TextBlock.Style>
+                                        <Style TargetType="{x:Type TextBlock}">
+                                            <Setter Property="Visibility" Value="Hidden"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Text, ElementName=ImageSearchBox}" Value="">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+
+                                <TextBlock x:Name="SeachTBlock"
+                                        HorizontalAlignment="Right" 
+                                        VerticalAlignment="Center"
+                                        Width="30"
+                                        Height="20"
+                                        Background="Transparent"
+                                        >
+                                    <Image Source="/search.png" />
+                                </TextBlock>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+
+
+</ResourceDictionary>

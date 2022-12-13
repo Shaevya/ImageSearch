@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Ce/gByS/yTW0Kzpzw9X9mpEbpoDctzVx/wnwALHqo0Q=",
+  "Source": "ImageSearchServer",
+  "BasePath": "_content/ImageSearchServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
